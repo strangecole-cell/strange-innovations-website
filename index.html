@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Strange Innovations — A family creative lab building apps, games, and educational tools together. Where curiosity meets entrepreneurship.">
+  <meta name="keywords" content="Strange Innovations, Strange Strategic Investments, family creative studio, Food Noise app, Cheat Code Mania, indie games, medical education">
+  <meta property="og:title" content="Strange Innovations — Building Together">
+  <meta property="og:description" content="A family creative lab building things that matter.">
+  <meta property="og:type" content="website">
+  <title>Strange Innovations — Building Together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAVIGATION ═══════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-strange">Strange</span><span class="logo-dot"> · </span><span class="logo-innovations">Innovations</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#family">Family</a></li>
+        <li><a href="#cole">Cole</a></li>
+        <li><a href="#weston">Weston</a></li>
+        <li><a href="#michelle">Michelle</a></li>
+        <li><a href="#why">Our Story</a></li>
+        <li><a href="#japan" class="nav-cta">Japan Challenge 🇯🇵</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#family" class="mobile-link">The Family</a></li>
+        <li><a href="#cole" class="mobile-link">Cole's Projects</a></li>
+        <li><a href="#weston" class="mobile-link">Weston's Games</a></li>
+        <li><a href="#michelle" class="mobile-link">Michelle's Tools</a></li>
+        <li><a href="#why" class="mobile-link">Our Story</a></li>
+        <li><a href="#japan" class="mobile-link mobile-link-special">Japan Challenge 🇯🇵</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-bg">
+      <img src="Graphics/familyshot.jpg" alt="The Strange Family" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Strange Innovations</div>
+      <h1 class="hero-headline">
+        <span class="hero-line hero-line-1">A Family</span>
+        <span class="hero-line hero-line-2">Building Things</span>
+        <span class="hero-line hero-line-3">That Matter</span>
+      </h1>
+      <p class="hero-sub">
+        Apps. Games. Educational tools. Creative experiments.<br>
+        Built together — with curiosity as our compass.
+      </p>
+      <div class="hero-ctas">
+        <a href="#cole" class="btn btn-gold">Explore Projects</a>
+        <a href="#why" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FAMILY ═══════════════════════════════════ -->
+  <section class="section family-section" id="family">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Meet the Builders</span>
+        <h2 class="section-title">The Strange Family</h2>
+        <p class="section-sub">Three curious people. One shared mission — to create, learn, and build things worth building.</p>
+      </div>
+
+      <div class="family-grid">
+
+        <!-- Cole -->
+        <div class="family-card reveal" data-accent="gold">
+          <div class="family-card-glow glow-gold"></div>
+          <div class="family-card-body">
+            <div class="member-avatar-wrap">
+              <img src="Graphics/cole_head_shot.jpeg" alt="Cole Strange" class="member-avatar">
+              <div class="member-ring ring-gold"></div>
+            </div>
+            <h3 class="member-name">Cole Strange</h3>
+            <span class="member-role">Founder · Builder · Systems Thinker</span>
+            <p class="member-bio">
+              Cole builds apps designed to change how people think and live. Obsessed with behavioral science,
+              entrepreneurship, and creating systems that actually work. Dad. Maker. Recovering perfectionist.
+            </p>
+            <div class="member-tags">
+              <span class="tag tag-gold">App Dev</span>
+              <span class="tag tag-gold">Behavioral Science</span>
+              <span class="tag tag-gold">Entrepreneurship</span>
+              <span class="tag tag-gold">Systems Thinking</span>
+            </div>
+            <a href="#cole" class="member-link">See Cole's Projects →</a>
+          </div>
+        </div>
+
+        <!-- Weston -->
+        <div class="family-card reveal" data-accent="blue">
+          <div class="family-card-glow glow-blue"></div>
+          <div class="family-card-body">
+            <div class="member-avatar-wrap">
+              <img src="Graphics/Weston_head_shot.png" alt="Weston Strange" class="member-avatar">
+              <div class="member-ring ring-blue"></div>
+            </div>
+            <h3 class="member-name">Weston Strange</h3>
+            <span class="member-role">Game Developer · YouTuber · Future Legend</span>
+            <p class="member-bio">
+              Weston is building games that are actually fun to play — and running a YouTube channel
+              where he makes science, math, art, and language click for curious learners. Part developer, part educator, full-time creative. He's just getting started.
+            </p>
+            <div class="member-tags">
+              <span class="tag tag-blue">Game Dev</span>
+              <span class="tag tag-blue">YouTube</span>
+              <span class="tag tag-blue">Education</span>
+              <span class="tag tag-blue">Science & Math</span>
+            </div>
+            <a href="#weston" class="member-link">See Weston's Games →</a>
+          </div>
+        </div>
+
+        <!-- Michelle -->
+        <div class="family-card reveal" data-accent="purple">
+          <div class="family-card-glow glow-purple"></div>
+          <div class="family-card-body">
+            <div class="member-avatar-wrap">
+              <img src="Graphics/michelle_headshot.jpg" alt="Michelle Strange" class="member-avatar">
+              <div class="member-ring ring-purple"></div>
+            </div>
+            <h3 class="member-name">Michelle Strange</h3>
+            <span class="member-role">PA Student · Educator · Problem Solver</span>
+            <p class="member-bio">
+              Michelle is building the medical education tools she wished existed when she started.
+              Part clinician, part designer — creating resources that make complex learning feel human and achievable.
+            </p>
+            <div class="member-tags">
+              <span class="tag tag-purple">Medical Education</span>
+              <span class="tag tag-purple">EMR Tools</span>
+              <span class="tag tag-purple">Student Resources</span>
+              <span class="tag tag-purple">Clinical Sim</span>
+            </div>
+            <a href="#michelle" class="member-link">See Michelle's Tools →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ COLE ═══════════════════════════════════ -->
+  <section class="section creator-section" id="cole">
+    <div class="creator-bg-accent accent-gold"></div>
+    <div class="container">
+
+      <div class="creator-intro">
+        <div class="creator-intro-text reveal">
+          <span class="creator-tag ctag-gold">Cole Strange</span>
+          <h2 class="creator-title">Apps That Change<br>How You Think</h2>
+          <p class="creator-desc">
+            Building tools at the intersection of behavioral science, habit formation, and everyday decision-making.
+            Each project is a small system designed to move the needle on something real.
+          </p>
+        </div>
+        <div class="creator-intro-photo reveal">
+          <div class="creator-photo-frame frame-gold">
+            <img src="Graphics/cole_head_shot.jpeg" alt="Cole Strange" class="creator-photo-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured: Food Noise -->
+      <div class="featured-app reveal">
+        <div class="featured-app-label label-gold">Featured App</div>
+        <div class="featured-app-inner">
+          <div class="featured-app-info">
+            <div class="app-icon food-noise-icon">
+              <span>🧠</span>
+            </div>
+            <h3 class="featured-app-name">Food Noise</h3>
+            <p class="featured-app-tagline">Quiet the mental chatter around food.</p>
+            <p class="featured-app-desc">
+              Food Noise is the app for people who think about food too much — not to shame you,
+              but to help you understand the noise. Track triggers, identify patterns, and build
+              a calmer relationship with eating. Built from personal experience and behavioral science research.
+            </p>
+            <div class="featured-app-tags">
+              <span class="tag tag-gold">Behavioral Science</span>
+              <span class="tag tag-gold">Habit Tracking</span>
+              <span class="tag tag-gold">Mental Wellness</span>
+            </div>
+            <div class="store-buttons">
+              <a href="#" class="store-btn">
+                <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div class="store-btn-text">
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="store-btn">
+                <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.303c.09.051.162.12.22.2a1 1 0 0 1 0 1.192.999.999 0 0 1-.22.2l-2.02 1.167L13.5 12l2.178-2.178 2.02 1.582zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.634z"/></svg>
+                <div class="store-btn-text">
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="featured-app-visual">
+            <div class="phone-mockup">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="mock-app-header">Food Noise</div>
+                  <div class="mock-chart">
+                    <div class="mock-bar" style="--h:55%"></div>
+                    <div class="mock-bar" style="--h:80%"></div>
+                    <div class="mock-bar" style="--h:40%"></div>
+                    <div class="mock-bar" style="--h:90%"></div>
+                    <div class="mock-bar" style="--h:60%"></div>
+                    <div class="mock-bar" style="--h:75%"></div>
+                    <div class="mock-bar" style="--h:35%"></div>
+                  </div>
+                  <div class="mock-insight">
+                    <span class="mock-insight-label">Today's noise level</span>
+                    <span class="mock-insight-val">Low ✓</span>
+                  </div>
+                  <div class="mock-log-item">
+                    <span>3:00 PM · Stress trigger</span>
+                    <span class="mock-dot dot-amber"></span>
+                  </div>
+                  <div class="mock-log-item">
+                    <span>6:30 PM · Pattern broken</span>
+                    <span class="mock-dot dot-green"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cole Project Grid -->
+      <h3 class="projects-subtitle">More From Cole</h3>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-card-icon">💡</div>
+          <h4>Lifestyle & Behavior Tools</h4>
+          <p>A growing suite of apps designed around the science of how humans actually change — not how we wish we would.</p>
+          <span class="status-pill pill-amber">In Development</span>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-card-icon">📊</div>
+          <h4>Systems Thinking Platform</h4>
+          <p>Tools for mapping, visualizing, and improving the systems in your life — health, finances, relationships, and work.</p>
+          <span class="status-pill pill-blue">Concept Stage</span>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-card-icon">🎥</div>
+          <h4>YouTube Channel</h4>
+          <p>Behind-the-scenes of building apps, lessons from entrepreneurship, and honest conversations about the journey.</p>
+          <span class="status-pill pill-gray">Coming Soon</span>
+        </div>
+        <div class="project-card project-card-placeholder reveal">
+          <div class="project-card-icon">＋</div>
+          <h4>More Coming</h4>
+          <p>New apps, experiments, and tools are always in the works. This space grows as ideas ship.</p>
+          <span class="status-pill pill-gray">Future</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ WESTON ═══════════════════════════════════ -->
+  <section class="section creator-section weston-section" id="weston">
+    <div class="creator-bg-accent accent-blue"></div>
+    <div class="container">
+
+      <div class="creator-intro creator-intro-reversed">
+        <div class="creator-intro-photo reveal">
+          <div class="creator-photo-frame frame-blue">
+            <img src="Graphics/Weston_head_shot.png" alt="Weston Strange" class="creator-photo-img">
+          </div>
+        </div>
+        <div class="creator-intro-text reveal">
+          <span class="creator-tag ctag-blue">Weston Strange</span>
+          <h2 class="creator-title">Games Built<br>From Imagination</h2>
+          <p class="creator-desc">
+            Weston is building games that are actually fun to play — and teaching a growing
+            community through a YouTube channel where science, math, art, and language actually make sense. Part developer, part educator. Full-time creative.
+          </p>
+        </div>
+      </div>
+
+      <!-- Featured: Cheat Code Mania -->
+      <div class="featured-app reveal featured-app-blue">
+        <div class="featured-app-label label-blue">Featured Game</div>
+        <div class="featured-app-inner">
+          <div class="featured-app-info">
+            <div class="app-icon game-icon">
+              <span>🎮</span>
+            </div>
+            <h3 class="featured-app-name">Cheat Code Mania</h3>
+            <p class="featured-app-tagline">The game that celebrates gaming culture.</p>
+            <p class="featured-app-desc">
+              A love letter to gaming's greatest moments. Cheat Code Mania challenges players
+              to guess legendary cheat codes from gaming history — from Konami classics to modern
+              Easter eggs. Built by a kid who loves games, for everyone who does.
+            </p>
+            <div class="featured-app-tags">
+              <span class="tag tag-blue">Trivia</span>
+              <span class="tag tag-blue">Gaming Culture</span>
+              <span class="tag tag-blue">Nostalgia</span>
+            </div>
+            <div class="store-buttons">
+              <a href="#" class="store-btn store-btn-blue">
+                <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div class="store-btn-text">
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="store-btn store-btn-blue">
+                <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.303c.09.051.162.12.22.2a1 1 0 0 1 0 1.192.999.999 0 0 1-.22.2l-2.02 1.167L13.5 12l2.178-2.178 2.02 1.582zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.634z"/></svg>
+                <div class="store-btn-text">
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="featured-app-visual">
+            <div class="game-mockup">
+              <div class="game-screen">
+                <div class="game-title-bar">CHEAT CODE MANIA</div>
+                <div class="game-question-area">
+                  <p class="game-prompt">Which game used this legendary code?</p>
+                  <div class="cheat-code-display">↑ ↑ ↓ ↓ ← → ← → B A</div>
+                </div>
+                <div class="game-options-grid">
+                  <div class="game-option">Contra</div>
+                  <div class="game-option">Sonic</div>
+                  <div class="game-option">Mario</div>
+                  <div class="game-option">Zelda</div>
+                </div>
+                <div class="game-score-bar">
+                  <span>Score: 2,400</span>
+                  <span>Level 3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Games Library -->
+      <div class="projects-header-row">
+        <h3 class="projects-subtitle">Weston's Game Library</h3>
+        <span class="projects-note">New games added regularly</span>
+      </div>
+      <div class="games-grid">
+        <div class="game-card reveal">
+          <div class="game-thumb game-thumb-race">🏎️</div>
+          <div class="game-card-info">
+            <h4>Race O Race</h4>
+            <p>A fast-paced racing game where speed meets strategy. Built for anyone who loves the rush of the track.</p>
+            <div class="game-tags">
+              <span class="tag tag-blue">Racing</span>
+              <span class="tag tag-blue">Action</span>
+            </div>
+            <div class="store-buttons store-buttons-sm">
+              <a href="#" class="store-btn store-btn-sm store-btn-blue">App Store</a>
+              <a href="#" class="store-btn store-btn-sm store-btn-blue">Google Play</a>
+            </div>
+          </div>
+        </div>
+        <div class="game-card reveal">
+          <div class="game-thumb game-thumb-element">⚗️</div>
+          <div class="game-card-info">
+            <h4>Element Quest</h4>
+            <p>Discover, combine, and master the periodic table through gameplay. Learning disguised as adventure.</p>
+            <div class="game-tags">
+              <span class="tag tag-blue">Educational</span>
+              <span class="tag tag-blue">Puzzle</span>
+            </div>
+            <div class="store-buttons store-buttons-sm">
+              <a href="#" class="store-btn store-btn-sm store-btn-blue">App Store</a>
+              <a href="#" class="store-btn store-btn-sm store-btn-blue">Google Play</a>
+            </div>
+          </div>
+        </div>
+        <div class="game-card game-card-next reveal">
+          <div class="game-thumb game-thumb-next">🌟</div>
+          <div class="game-card-info">
+            <h4>Next Drop</h4>
+            <p>Weston's always working on something. Check back soon — the next game is already in progress.</p>
+            <div class="game-tags">
+              <span class="tag tag-blue">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Western Weston Education -->
+      <div class="sub-brand reveal" id="western-weston">
+        <div class="sub-brand-header">
+          <div class="sub-brand-icon">📺</div>
+          <div>
+            <span class="creator-tag ctag-blue" style="font-size:0.7rem; padding:4px 12px;">YouTube Channel</span>
+            <h3 class="sub-brand-title">Western Weston Education</h3>
+            <p class="sub-brand-desc">Making science, math, art, and language click for curious learners — one video at a time.</p>
+          </div>
+        </div>
+        <div class="yt-stats">
+          <div class="yt-stat">
+            <span class="yt-stat-num">26</span>
+            <span class="yt-stat-label">Videos Live</span>
+          </div>
+          <div class="yt-stat">
+            <span class="yt-stat-num">∞</span>
+            <span class="yt-stat-label">More Planned</span>
+          </div>
+          <div class="yt-stat">
+            <span class="yt-stat-num">↑</span>
+            <span class="yt-stat-label">Growing Weekly</span>
+          </div>
+        </div>
+        <div class="classroom-photo-wrap">
+          <img src="Graphics/Weston classroom.JPG" alt="Weston teaching a class about pH" class="classroom-photo">
+          <p class="classroom-caption">Weston breaking down pH in the classroom — making chemistry make sense.</p>
+        </div>
+        <div class="yt-embed-placeholder">
+          <!-- To embed a specific video: replace the div below with a YouTube iframe -->
+          <!-- Example: <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+          <div class="yt-placeholder-inner">
+            <div class="yt-play-circle">▶</div>
+            <p>Western Weston Education</p>
+            <span>Paste a video embed here when ready</span>
+          </div>
+        </div>
+        <a href="https://www.youtube.com/@WesternWestonEducation" target="_blank" rel="noopener" class="btn btn-blue-outline" style="margin-top:1.5rem; display:inline-block;">Visit the Channel →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ MICHELLE ═══════════════════════════════════ -->
+  <section class="section creator-section michelle-section" id="michelle">
+    <div class="creator-bg-accent accent-purple"></div>
+    <div class="container">
+
+      <div class="creator-intro">
+        <div class="creator-intro-text reveal">
+          <span class="creator-tag ctag-purple">Michelle Strange</span>
+          <h2 class="creator-title">Medical Education<br>That Actually Helps</h2>
+          <p class="creator-desc">
+            Building the tools, guides, and resources that PA students and medical learners
+            actually need — designed from the inside of the experience, not outside of it.
+          </p>
+        </div>
+        <div class="creator-intro-photo reveal">
+          <div class="creator-photo-frame frame-purple">
+            <img src="Graphics/michelle_activeshot.jpg" alt="Michelle Strange" class="creator-photo-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Toolkit -->
+      <div class="featured-app reveal featured-app-purple">
+        <div class="featured-app-label label-purple">Student Toolkit</div>
+        <div class="dashboard-preview">
+          <div class="dashboard-top">
+            <div>
+              <h3 class="dashboard-title">PA Student Hub</h3>
+              <p class="dashboard-sub">Your clinical education, organized.</p>
+            </div>
+            <span class="status-pill pill-green">Active Development</span>
+          </div>
+          <div class="dashboard-grid">
+            <div class="dash-tool dash-tool-featured reveal">
+              <div class="dash-tool-icon">📋</div>
+              <h4>Case Presentation Builder</h4>
+              <p>Structured templates for presenting complex clinical cases clearly and confidently.</p>
+              <span class="status-pill pill-amber">In Development</span>
+            </div>
+            <div class="dash-tool reveal">
+              <div class="dash-tool-icon">🏥</div>
+              <h4>EMR Simulation Guide</h4>
+              <p>Navigate electronic medical records like a pro from day one on rotation.</p>
+              <span class="status-pill pill-amber">In Development</span>
+            </div>
+            <div class="dash-tool reveal">
+              <div class="dash-tool-icon">📖</div>
+              <h4>Student Survival Guide</h4>
+              <p>The honest guide nobody gives you — from first week chaos to clinical mastery.</p>
+              <span class="status-pill pill-blue">Coming Soon</span>
+            </div>
+            <div class="dash-tool reveal">
+              <div class="dash-tool-icon">🗂️</div>
+              <h4>Study Organization System</h4>
+              <p>A battle-tested framework for keeping your studies, rotations, and life in order.</p>
+              <span class="status-pill pill-blue">Coming Soon</span>
+            </div>
+            <div class="dash-tool reveal">
+              <div class="dash-tool-icon">💉</div>
+              <h4>Clinical Skills Reference</h4>
+              <p>Quick-access guides for procedures, assessments, and clinical decision-making.</p>
+              <span class="status-pill pill-gray">Planning</span>
+            </div>
+            <div class="dash-tool dash-tool-add reveal">
+              <div class="dash-tool-icon">＋</div>
+              <h4>More Tools Coming</h4>
+              <p>New resources added as Michelle identifies gaps in what currently exists for students.</p>
+              <span class="status-pill pill-gray">Future</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ WHY ═══════════════════════════════════ -->
+  <section class="why-section" id="why">
+    <div class="why-bg">
+      <img src="Graphics/cole_weston_activeshot.jpg" alt="Cole and Weston" class="why-bg-img">
+      <div class="why-overlay"></div>
+    </div>
+    <div class="container why-container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">Why We Build Things</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num">01</div>
+          <h3>We chose alignment over autopilot.</h3>
+          <p>
+            After years in environments that slowly drained the joy from work, we made a decision —
+            not to quit and figure it out later, but to build the alternative while we still could.
+            Leaving wasn't the end. It was the beginning.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">02</div>
+          <h3>We want to model it, not just say it.</h3>
+          <p>
+            We tell our kids to pursue meaningful work. To follow curiosity. To not settle.
+            But children don't hear what you say — they watch what you do.
+            This is us doing it.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">03</div>
+          <h3>Building beats consuming.</h3>
+          <p>
+            There's something that happens when you stop watching things and start making them.
+            You get better at thinking. You get better at failing. You get better at trying again.
+            We build because building changes you.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">04</div>
+          <h3>Entrepreneurship is identity work.</h3>
+          <p>
+            Creating something isn't just about money. It's about proving to yourself that you can bring
+            something from nothing — that your ideas have value, that your work matters, and that you
+            don't have to fit someone else's mold to succeed.
+          </p>
+        </div>
+      </div>
+      <blockquote class="why-quote reveal">
+        "If you want your children to pursue meaningful work,<br>
+        you have to be willing to pursue it yourself."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ JAPAN ═══════════════════════════════════ -->
+  <section class="section japan-section" id="japan">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag japan-tag">Family Challenge</span>
+        <h2 class="section-title">The Japan Mission 🇯🇵</h2>
+        <p class="section-sub">
+          We made a deal. If our apps, games, and projects collectively hit <strong>$30,000</strong> in revenue,
+          the whole family goes to Japan. The twist? We each picked Japan independently.
+          <br><em>The destination chose us.</em>
+        </p>
+      </div>
+
+      <!-- Main Tracker -->
+      <div class="japan-tracker reveal">
+
+        <div class="tracker-stats">
+          <div class="tracker-stat">
+            <span class="tstat-label">Current Revenue</span>
+            <!-- UPDATE THIS VALUE as you earn money -->
+            <span class="tstat-value tstat-current" id="currentRevenue">$0</span>
+          </div>
+          <div class="tracker-stat tracker-stat-goal">
+            <span class="tstat-label">Goal</span>
+            <span class="tstat-value tstat-goal">$30,000</span>
+            <span class="tstat-emoji">🇯🇵</span>
+          </div>
+          <div class="tracker-stat">
+            <span class="tstat-label">Remaining</span>
+            <span class="tstat-value tstat-remaining" id="remainingRevenue">$30,000</span>
+          </div>
+        </div>
+
+        <div class="progress-area">
+          <div class="milestones">
+            <div class="ms-point" style="left:16.67%"><span>$5K</span></div>
+            <div class="ms-point" style="left:33.33%"><span>$10K</span></div>
+            <div class="ms-point ms-half" style="left:50%"><span>$15K</span><div class="ms-half-label">Halfway!</div></div>
+            <div class="ms-point" style="left:66.67%"><span>$20K</span></div>
+            <div class="ms-point" style="left:83.33%"><span>$25K</span></div>
+            <div class="ms-point ms-final" style="left:100%"><span>$30K ✈️</span></div>
+          </div>
+          <div class="progress-track">
+            <!-- UPDATE data-percent to reflect current progress (0-100) -->
+            <div class="progress-fill" id="progressFill" data-percent="0" style="width:0%">
+              <div class="progress-shine"></div>
+            </div>
+            <div class="progress-plane" id="progressPlane" style="left:0%">✈️</div>
+          </div>
+        </div>
+
+        <!-- Contributor Breakdown -->
+        <div class="contributors">
+          <h3 class="contributors-title">Who's Contributing</h3>
+          <div class="contributor-list">
+            <!-- Cole -->
+            <div class="contributor">
+              <img src="Graphics/cole_head_shot.jpeg" alt="Cole" class="contributor-avatar">
+              <div class="contributor-info">
+                <div class="contributor-header">
+                  <span class="contributor-name">Cole</span>
+                  <!-- UPDATE contributor-amount values -->
+                  <span class="contributor-amount" id="coleAmount">$0</span>
+                </div>
+                <span class="contributor-projects">Food Noise + upcoming apps</span>
+                <div class="contributor-bar-track">
+                  <!-- UPDATE style="width:X%" where X is (cole_revenue / 30000 * 100) -->
+                  <div class="contributor-fill cfill-gold" id="coleBar" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Weston -->
+            <div class="contributor">
+              <img src="Graphics/Weston_head_shot.png" alt="Weston" class="contributor-avatar">
+              <div class="contributor-info">
+                <div class="contributor-header">
+                  <span class="contributor-name">Weston</span>
+                  <span class="contributor-amount" id="westonAmount">$0</span>
+                </div>
+                <span class="contributor-projects">Games + YouTube revenue</span>
+                <div class="contributor-bar-track">
+                  <div class="contributor-fill cfill-blue" id="westonBar" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Michelle -->
+            <div class="contributor">
+              <img src="Graphics/michelle_headshot.jpg" alt="Michelle" class="contributor-avatar">
+              <div class="contributor-info">
+                <div class="contributor-header">
+                  <span class="contributor-name">Michelle</span>
+                  <span class="contributor-amount" id="michelleAmount">$0</span>
+                </div>
+                <span class="contributor-projects">Educational tools + resources</span>
+                <div class="contributor-bar-track">
+                  <div class="contributor-fill cfill-purple" id="michelleBar" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Japan Info Cards -->
+      <div class="japan-cards">
+        <div class="japan-card reveal">
+          <span class="japan-card-emoji">🏯</span>
+          <h4>Why Japan?</h4>
+          <p>We each independently chose Japan as our dream destination. The universe wasn't subtle about it. We're listening.</p>
+        </div>
+        <div class="japan-card reveal">
+          <span class="japan-card-emoji">🎯</span>
+          <h4>The Rules</h4>
+          <p>$30,000 in combined revenue from apps, games, tools, and creative projects. No shortcuts. Just shipping things people love.</p>
+        </div>
+        <div class="japan-card reveal">
+          <span class="japan-card-emoji">⛩️</span>
+          <h4>The Bigger Point</h4>
+          <p>This trip is proof that creativity and entrepreneurship can pay for the life you actually want — not just the one you settled for.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer" id="legal">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-strange">Strange</span><span class="logo-dot"> · </span><span class="logo-innovations">Innovations</span>
+            </div>
+            <p class="footer-tagline">A family creative lab building apps, games, and educational tools — together.</p>
+            <p class="footer-entity">Strange Strategic Investments LLC</p>
+            <div class="footer-socials">
+              <a href="https://www.youtube.com/@WesternWestonEducation" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Projects</h4>
+            <ul>
+              <li><a href="#cole">Food Noise App</a></li>
+              <li><a href="#weston">Cheat Code Mania</a></li>
+              <li><a href="#weston">Race O Race</a></li>
+              <li><a href="#weston">Element Quest</a></li>
+              <li><a href="#weston">Western Weston Education</a></li>
+              <li><a href="#michelle">PA Student Hub</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>The Family</h4>
+            <ul>
+              <li><a href="#cole">Cole Strange</a></li>
+              <li><a href="#weston">Weston Strange</a></li>
+              <li><a href="#michelle">Michelle Strange</a></li>
+              <li><a href="#why">Our Story</a></li>
+              <li><a href="#japan">Japan Challenge</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal & Compliance</h4>
+            <ul>
+              <li><a href="legal/privacy.html">Privacy Policy</a></li>
+              <li><a href="legal/terms.html">Terms of Service</a></li>
+              <li><a href="legal/privacy.html#food-noise">Food Noise Privacy</a></li>
+              <li><a href="legal/privacy.html#cheat-code">Cheat Code Mania Privacy</a></li>
+              <li><a href="legal/privacy.html#western-weston">Western Weston Privacy</a></li>
+              <li><a href="mailto:hello@strangeinnovations.com">Contact / Legal Inquiries</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2024 Strange Strategic Investments LLC. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="legal/privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="legal/terms.html">Terms of Service</a>
+          <span>·</span>
+          <a href="mailto:hello@strangeinnovations.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
