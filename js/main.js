@@ -6,7 +6,7 @@
    ─────────────────────────────────────────────────────────────────────── */
 const REVENUE = {
   cole:     0,   // Food Noise + other Cole apps
-  weston:   0,   // Games + YouTube
+  weston:   26,  // Games + YouTube
   michelle: 0,   // Educational tools + resources
 };
 const JAPAN_GOAL = 30000;
