@@ -1377,3 +1377,235 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .tracker-stats { grid-template-columns: 1fr; }
   .tracker-stat-goal { grid-column: 1; }
 }
+
+/* ═══════════════════════════════════ SAZIO BRAND ═══════════════════════════════════ */
+:root {
+  --sazio-teal: #0ea5a0;
+  --sazio-teal-light: #2dd4bf;
+  --sazio-teal-glow: rgba(14,165,160,0.18);
+}
+
+/* Sazio project landing page */
+.sazio-page { min-height: 100vh; background: var(--bg-0); display: flex; flex-direction: column; }
+
+.sazio-hero-section {
+  flex: 1;
+  padding: 120px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle signal-wave motif — concentric CSS rings */
+.sazio-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  right: -180px;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    0 0 0 1px rgba(14,165,160,0.07),
+    0 0 0 50px rgba(14,165,160,0.04),
+    0 0 0 110px rgba(14,165,160,0.025),
+    0 0 0 180px rgba(14,165,160,0.015),
+    0 0 0 260px rgba(14,165,160,0.008);
+  pointer-events: none;
+}
+
+.sazio-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.sazio-icon-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+
+.sazio-icon-img {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sazio-name-block { display: flex; flex-direction: column; gap: 10px; }
+
+.sazio-wordmark-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sazio-wordmark {
+  font-family: var(--font-head);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 300;
+  color: #9ca3af;
+  letter-spacing: 0.35em;
+  line-height: 1;
+  margin: 0;
+}
+
+.sazio-wordmark-i {
+  position: relative;
+}
+
+.sazio-wordmark-i::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sazio-teal);
+}
+
+.sazio-name {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.sazio-beta-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 12px;
+  background: var(--sazio-teal-glow);
+  border: 1px solid rgba(14,165,160,0.28);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--sazio-teal-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sazio-tagline {
+  font-family: var(--font-head);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 500;
+  color: var(--sazio-teal-light);
+  line-height: 1.3;
+}
+
+.sazio-desc { font-size: 0.97rem; color: var(--text-2); line-height: 1.78; max-width: 580px; }
+
+.sazio-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.sazio-link {
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--sazio-teal);
+  border-bottom: 1px solid rgba(14,165,160,0.28);
+  padding-bottom: 1px;
+  transition: color var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+.sazio-link:hover { color: var(--sazio-teal-light); border-color: var(--sazio-teal-light); }
+
+.sazio-link-sep { color: var(--text-3); font-size: 0.8rem; }
+
+.sazio-contact { font-size: 0.88rem; color: var(--text-3); }
+.sazio-contact a { color: var(--text-2); transition: color var(--t) var(--ease); }
+.sazio-contact a:hover { color: var(--sazio-teal-light); }
+
+.sazio-back-row {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px clamp(20px, 5vw, 60px) 48px;
+}
+
+.sazio-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  color: var(--text-3);
+  transition: color var(--t) var(--ease);
+}
+.sazio-back-link:hover { color: var(--sazio-teal-light); }
+
+.sazio-page-footer { border-top: 1px solid var(--border); padding: 24px clamp(20px, 5vw, 60px); text-align: center; }
+.sazio-page-footer p { font-size: 0.8rem; color: var(--text-3); }
+
+/* Sazio nav back link (used in sazio/index.html nav) */
+.sazio-nav-back {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  color: var(--text-3);
+  transition: color var(--t) var(--ease);
+}
+.sazio-nav-back:hover { color: var(--text-2); }
+
+/* Sazio legal sub-pages — teal overrides for gold */
+.sazio-legal .legal-content h2 { color: var(--sazio-teal); }
+.sazio-legal .legal-content a { color: var(--sazio-teal-light); }
+.sazio-legal .legal-back:hover { color: var(--sazio-teal-light); }
+
+/* Sub-nav shared across privacy / terms / support */
+.sazio-legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.sazio-legal-nav a {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  color: var(--sazio-teal) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(14,165,160,0.28);
+  padding-bottom: 1px;
+  transition: color var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+.sazio-legal-nav a:hover { color: var(--sazio-teal-light) !important; border-color: var(--sazio-teal-light); }
+.sazio-legal-nav-sep { color: var(--text-3); font-size: 0.8rem; }
+
+/* Callout box — not medical advice, crisis line */
+.sazio-notice {
+  background: rgba(14,165,160,0.06);
+  border-left: 3px solid var(--sazio-teal);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.sazio-notice p { font-size: 0.9rem; color: var(--text-2); margin-bottom: 0 !important; }
+
+/* "View Sazio page" link inside Cole's featured app card */
+.sazio-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  color: var(--text-3);
+  margin-top: 14px;
+  transition: color var(--t) var(--ease);
+}
+.sazio-page-link:hover { color: var(--gold-light); }
