@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1559 Forrest Ave NE – Investment Analysis</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --ink:#1a2436; --muted:#6b7686; --line:#e3e8ef; --bg:#f5f7fa;
+    --green:#1f9d55; --greenbg:#e8f6ee; --red:#d64545; --redbg:#fbeaea;
+    --accent:#1d4e89; --accent2:#3a7ca5; --gold:#c08a2d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.5;padding:32px 20px}
+  .wrap{max-width:1180px;margin:0 auto}
+  header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:8px}
+  .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:700}
+  h1{font-size:27px;margin:4px 0 2px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:14px}
+  .factbar{display:flex;flex-wrap:wrap;gap:0;margin:18px 0 26px;background:#fff;border:1px solid var(--line);
+           border-radius:12px;overflow:hidden}
+  .fact{flex:1;min-width:120px;padding:14px 16px;border-right:1px solid var(--line)}
+  .fact:last-child{border-right:none}
+  .fact .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  .fact .v{font-size:19px;font-weight:700;margin-top:3px}
+  h2{font-size:17px;margin:30px 0 14px;display:flex;align-items:center;gap:9px}
+  h2 .bar{width:4px;height:18px;background:var(--accent);border-radius:2px;display:inline-block}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;
+        box-shadow:0 1px 3px rgba(20,30,50,.04)}
+  .card.best{border-color:var(--green);box-shadow:0 0 0 2px var(--greenbg)}
+  .ctop{padding:14px 16px;border-bottom:1px solid var(--line);position:relative}
+  .ctop .name{font-weight:700;font-size:15px}
+  .ctop .terms{font-size:12px;color:var(--muted);margin-top:2px}
+  .tag{position:absolute;top:12px;right:12px;font-size:10px;font-weight:700;letter-spacing:.05em;
+       text-transform:uppercase;background:var(--greenbg);color:var(--green);padding:3px 8px;border-radius:20px}
+  .crow{display:flex;justify-content:space-between;padding:7px 16px;font-size:13px}
+  .crow:nth-child(even){background:#fafbfc}
+  .crow .k{color:var(--muted)}
+  .crow .val{font-weight:600;font-variant-numeric:tabular-nums}
+  .piti{background:#f0f4f9;font-weight:700}
+  .piti .val{color:var(--accent)}
+  .cflabel{padding:9px 16px 4px;font-size:10px;text-transform:uppercase;letter-spacing:.07em;
+           color:var(--muted);font-weight:700;background:#fff;border-top:1px solid var(--line)}
+  .cf{display:flex;justify-content:space-between;padding:6px 16px;font-size:13px}
+  .cf .k{color:var(--muted)}
+  .cf .val{font-weight:700;font-variant-numeric:tabular-nums}
+  .pos{color:var(--green)} .neg{color:var(--red)}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px}
+  .pill.pos{background:var(--greenbg)} .pill.neg{background:var(--redbg)}
+  .chartbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);
+        border-radius:12px;overflow:hidden;font-size:13px}
+  th,td{padding:10px 14px;text-align:right;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{background:#f0f4f9;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  tbody tr:last-child td{border-bottom:none}
+  .note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.55}
+  .assump{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;font-size:13px}
+  .assump ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+  .assump li{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding:4px 0}
+  .assump li span:last-child{font-weight:700}
+  footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+  @media(max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.cards{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.assump ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Rental Property Investment Analysis</div>
+    <h1>1559 Forrest Avenue NE, Grand Rapids, MI 49505</h1>
+    <div class="sub">Duplex &middot; Financing scenarios at 6.5% &middot; Prepared June 18, 2026</div>
+  </header>
+
+  <div class="factbar">
+    <div class="fact"><div class="l">Purchase Price</div><div class="v">$295,000</div></div>
+    <div class="fact"><div class="l">Interest Rate</div><div class="v">6.5%</div></div>
+    <div class="fact"><div class="l">Gross Rent (full)</div><div class="v">$3,190/mo</div></div>
+    <div class="fact"><div class="l">Top Unit</div><div class="v">$1,695</div></div>
+    <div class="fact"><div class="l">Bottom Unit</div><div class="v">$1,495*</div></div>
+  </div>
+
+  <h2><span class="bar"></span>Financing Scenarios &amp; Monthly Payment</h2>
+  <div class="cards">
+    <!-- Scenario 1 -->
+    <div class="card best">
+      <div class="ctop">
+        <span class="tag">Best return</span>
+        <div class="name">Scenario A</div>
+        <div class="terms">20% down &middot; 30-year amortization</div>
+      </div>
+      <div class="crow"><span class="k">Down payment</span><span class="val">$59,000</span></div>
+      <div class="crow"><span class="k">Loan amount</span><span class="val">$236,000</span></div>
+      <div class="crow"><span class="k">Principal &amp; Interest</span><span class="val">$1,491.68</span></div>
+      <div class="crow"><span class="k">Taxes</span><span class="val">$375.25</span></div>
+      <div class="crow"><span class="k">Insurance</span><span class="val">$167.17</span></div>
+      <div class="crow piti"><span class="k">Total PITI</span><span class="val">$2,034.10</span></div>
+      <div class="cflabel">Monthly cash flow</div>
+      <div class="cf"><span class="k">Pro forma (both rented)</span><span class="val pos">+$463.60</span></div>
+      <div class="cf"><span class="k">Current (top only)</span><span class="val neg">&minus;$777.25</span></div>
+    </div>
+    <!-- Scenario 2 -->
+    <div class="card">
+      <div class="ctop">
+        <div class="name">Scenario B</div>
+        <div class="terms">25% down &middot; 20-year amortization</div>
+      </div>
+      <div class="crow"><span class="k">Down payment</span><span class="val">$73,750</span></div>
+      <div class="crow"><span class="k">Loan amount</span><span class="val">$221,250</span></div>
+      <div class="crow"><span class="k">Principal &amp; Interest</span><span class="val">$1,649.58</span></div>
+      <div class="crow"><span class="k">Taxes</span><span class="val">$375.25</span></div>
+      <div class="crow"><span class="k">Insurance</span><span class="val">$167.17</span></div>
+      <div class="crow piti"><span class="k">Total PITI</span><span class="val">$2,192.00</span></div>
+      <div class="cflabel">Monthly cash flow</div>
+      <div class="cf"><span class="k">Pro forma (both rented)</span><span class="val pos">+$305.70</span></div>
+      <div class="cf"><span class="k">Current (top only)</span><span class="val neg">&minus;$935.15</span></div>
+    </div>
+    <!-- Scenario 3 -->
+    <div class="card">
+      <div class="ctop">
+        <div class="name">Scenario C</div>
+        <div class="terms">20% down &middot; 20-year amortization</div>
+      </div>
+      <div class="crow"><span class="k">Down payment</span><span class="val">$59,000</span></div>
+      <div class="crow"><span class="k">Loan amount</span><span class="val">$236,000</span></div>
+      <div class="crow"><span class="k">Principal &amp; Interest</span><span class="val">$1,759.55</span></div>
+      <div class="crow"><span class="k">Taxes</span><span class="val">$375.25</span></div>
+      <div class="crow"><span class="k">Insurance</span><span class="val">$167.17</span></div>
+      <div class="crow piti"><span class="k">Total PITI</span><span class="val">$2,301.97</span></div>
+      <div class="cflabel">Monthly cash flow</div>
+      <div class="cf"><span class="k">Pro forma (both rented)</span><span class="val pos">+$195.73</span></div>
+      <div class="cf"><span class="k">Current (top only)</span><span class="val neg">&minus;$1,045.12</span></div>
+    </div>
+    <!-- Scenario D -->
+    <div class="card">
+      <div class="ctop">
+        <span class="tag">Highest cash flow</span>
+        <div class="name">Scenario D</div>
+        <div class="terms">25% down &middot; 30-year amortization</div>
+      </div>
+      <div class="crow"><span class="k">Down payment</span><span class="val">$73,750</span></div>
+      <div class="crow"><span class="k">Loan amount</span><span class="val">$221,250</span></div>
+      <div class="crow"><span class="k">Principal &amp; Interest</span><span class="val">$1,398.45</span></div>
+      <div class="crow"><span class="k">Taxes</span><span class="val">$375.25</span></div>
+      <div class="crow"><span class="k">Insurance</span><span class="val">$167.17</span></div>
+      <div class="crow piti"><span class="k">Total PITI</span><span class="val">$1,940.87</span></div>
+      <div class="cflabel">Monthly cash flow</div>
+      <div class="cf"><span class="k">Pro forma (both rented)</span><span class="val pos">+$556.83</span></div>
+      <div class="cf"><span class="k">Current (top only)</span><span class="val neg">&minus;$684.02</span></div>
+    </div>
+  </div>
+
+  <h2><span class="bar"></span>Cash Flow Comparison</h2>
+  <div class="grid2">
+    <div class="chartbox"><canvas id="cfChart" height="260"></canvas></div>
+    <div class="chartbox"><canvas id="pitiChart" height="260"></canvas></div>
+  </div>
+
+  <h2><span class="bar"></span>Cash Flow Detail (Monthly)</h2>
+  <table>
+    <thead>
+      <tr><th>Line item</th><th>Pro forma</th><th>Current (top only)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Gross scheduled rent</td><td>$3,190.00</td><td>$1,695.00</td></tr>
+      <tr><td>Less vacancy (7%)</td><td>&minus;$223.30</td><td>&minus;$118.65</td></tr>
+      <tr><td>Less maintenance (10%)</td><td>&minus;$319.00</td><td>&minus;$169.50</td></tr>
+      <tr><td>Less water + lawn (owner)</td><td>&minus;$150.00</td><td>&minus;$150.00</td></tr>
+      <tr><td><strong>Net operating income</strong></td><td><strong>$2,497.70</strong></td><td><strong>$1,256.85</strong></td></tr>
+      <tr><td>Annual NOI</td><td>$29,972</td><td>$15,082</td></tr>
+      <tr><td>Cap rate (on price)</td><td>10.16%</td><td>5.11%</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Cash flow above each scenario = Net operating income minus that scenario's PITI. NOI is identical across scenarios; only the loan payment changes.</p>
+
+  <h2><span class="bar"></span>Return Summary</h2>
+  <table>
+    <thead>
+      <tr><th>Scenario</th><th>Cash to close*</th><th>Pro forma CF/yr</th><th>Cash-on-cash*</th><th>Current CF/yr</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>A &mdash; 20% / 30-yr</td><td>~$67,900</td><td class="pos">+$5,563</td><td>8.2%</td><td class="neg">&minus;$9,327</td></tr>
+      <tr><td>B &mdash; 25% / 20-yr</td><td>~$82,633</td><td class="pos">+$3,668</td><td>4.4%</td><td class="neg">&minus;$11,222</td></tr>
+      <tr><td>C &mdash; 20% / 20-yr</td><td>~$67,900</td><td class="pos">+$2,349</td><td>3.5%</td><td class="neg">&minus;$12,541</td></tr>
+      <tr><td>D &mdash; 25% / 30-yr</td><td>~$82,650</td><td class="pos">+$6,682</td><td>8.1%</td><td class="neg">&minus;$8,208</td></tr>
+    </tbody>
+  </table>
+  <p class="note">*Cash to close = down payment + estimated closing &amp; prepaid costs (~$8,900, per the lender estimate for the 25%/20yr case at $8,883). Closing costs vary by down payment and rate; treat as an estimate. Cash-on-cash = pro forma annual cash flow &divide; cash to close.</p>
+
+  <h2><span class="bar"></span>Assumptions</h2>
+  <div class="assump">
+    <ul>
+      <li><span>Interest rate</span><span>6.50%</span></li>
+      <li><span>Property taxes</span><span>$375.25/mo</span></li>
+      <li><span>Homeowners insurance</span><span>$167.17/mo</span></li>
+      <li><span>Vacancy factor</span><span>7%</span></li>
+      <li><span>Maintenance reserve</span><span>10% of rent</span></li>
+      <li><span>Owner-paid (water + lawn)</span><span>$150/mo</span></li>
+      <li><span>Top unit rent</span><span>$1,695/mo</span></li>
+      <li><span>Bottom unit rent</span><span>$1,495/mo *vacant</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    Prepared for client review by Edison Brokers &amp; Co. Tax and insurance figures sourced from the lender's Home Estimate (6/18/2026).
+    This analysis is for informational purposes only and does not constitute financial, tax, or lending advice. Final figures should be confirmed with your lender. Cole Strange &middot; 231-878-3507.
+  </footer>
+</div>
+
+<script>
+const fmt = v => '$'+v.toLocaleString();
+const labels = ['A: 20%/30yr','B: 25%/20yr','C: 20%/20yr','D: 25%/30yr'];
+const proforma = [463.60, 305.70, 195.73, 556.83];
+const current  = [-777.25, -935.15, -1045.12, -684.02];
+
+new Chart(document.getElementById('cfChart'), {
+  type:'bar',
+  data:{labels:labels,datasets:[
+    {label:'Pro forma (both rented)',data:proforma,backgroundColor:'#1f9d55',borderRadius:4},
+    {label:'Current (top only)',data:current,backgroundColor:'#d64545',borderRadius:4}
+  ]},
+  options:{responsive:true,plugins:{
+    title:{display:true,text:'Monthly Cash Flow by Scenario',font:{size:14,weight:'700'},color:'#1a2436'},
+    legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}},
+    tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)}}},
+    scales:{y:{ticks:{callback:v=>'$'+v}}}}
+});
+
+new Chart(document.getElementById('pitiChart'), {
+  type:'bar',
+  data:{labels:labels,datasets:[
+    {label:'Principal & Interest',data:[1491.68,1649.58,1759.55,1398.45],backgroundColor:'#1d4e89',borderRadius:4},
+    {label:'Taxes + Insurance',data:[542.42,542.42,542.42,542.42],backgroundColor:'#3a7ca5',borderRadius:4}
+  ]},
+  options:{responsive:true,plugins:{
+    title:{display:true,text:'Monthly PITI Breakdown',font:{size:14,weight:'700'},color:'#1a2436'},
+    legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}},
+    tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)}}},
+    scales:{x:{stacked:true},y:{stacked:true,ticks:{callback:v=>'$'+v}}}}
+});
+</script>
+</body>
+</html>
