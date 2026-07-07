@@ -6,7 +6,7 @@
    ─────────────────────────────────────────────────────────────────────── */
 const REVENUE = {
   cole:     0,   // Food Noise + other Cole apps
-  weston:   26,  // Games + YouTube
+  weston:   29,  // Games + YouTube
   michelle: 0,   // Educational tools + resources
 };
 const JAPAN_GOAL = 30000;
@@ -181,6 +181,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+
+/* ── Sazio screenshot switcher ── */
+(function initSazioSwitcher() {
+  const featuredImg = document.getElementById('sazioFeaturedImg');
+  const thumbs = document.querySelectorAll('.sazio-thumb');
+  if (!featuredImg || !thumbs.length) return;
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', function() {
+      if (this.classList.contains('sazio-thumb-active')) return;
+      thumbs.forEach(t => t.classList.remove('sazio-thumb-active'));
+      this.classList.add('sazio-thumb-active');
+      featuredImg.classList.add('sazio-fading');
+      setTimeout(() => {
+        featuredImg.src = this.dataset.src;
+        featuredImg.alt = this.dataset.alt;
+        featuredImg.classList.remove('sazio-fading');
+      }, 300);
+    });
+  });
+})();
 
 
 /* ── Game option hover interaction ── */

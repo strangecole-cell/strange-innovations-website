@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">Sazio wordmark</title>
+  <desc id="desc">Simple modern Sazio wordmark in dark slate with an aqua dot over the i.</desc>
+  <text x="24" y="162"
+        fill="#24343A"
+        font-family="Avenir Next, Helvetica Neue, Segoe UI Light, Segoe UI, Arial, sans-serif"
+        font-size="152"
+        font-weight="300"
+        letter-spacing="1.5">Saz</text>
+  <rect x="404" y="82" width="9" height="80" rx="4.5" fill="#24343A"/>
+  <text x="420" y="162"
+        fill="#24343A"
+        font-family="Avenir Next, Helvetica Neue, Segoe UI Light, Segoe UI, Arial, sans-serif"
+        font-size="152"
+        font-weight="300"
+        letter-spacing="1.5">o</text>
+  <circle cx="408.5" cy="55" r="15" fill="#42C6BE"/>
+</svg>
